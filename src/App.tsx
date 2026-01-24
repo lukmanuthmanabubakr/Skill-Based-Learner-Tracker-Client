@@ -15,9 +15,6 @@ export default function App() {
         <Route path="register" element={<RegisterPage />} />
       </Route>
 
-      {/* Later: protected app routes */}
-      {/* <Route path="/app" element={<AppLayout />}> ... </Route> */}
-
       <Route path="*" element={<Navigate to="/auth/login" replace />} />
     </Routes>
   );
