@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 
 type Skill = {
   id: string;
@@ -28,6 +29,8 @@ type EvidenceItem = {
 };
 
 export default function DashboardPage() {
+  const navigate = useNavigate();
+
   const skills = useMemo<Skill[]>(
     () => [
       {
@@ -55,7 +58,7 @@ export default function DashboardPage() {
         streakDays: 2,
       },
     ],
-    []
+    [],
   );
 
   const practiceLogs = useMemo<PracticeLog[]>(
@@ -85,7 +88,7 @@ export default function DashboardPage() {
         date: "2 days ago",
       },
     ],
-    []
+    [],
   );
 
   const evidence = useMemo<EvidenceItem[]>(
@@ -115,7 +118,7 @@ export default function DashboardPage() {
         createdAt: "Yesterday",
       },
     ],
-    []
+    [],
   );
 
   const totalMinutes = practiceLogs.reduce((a, p) => a + p.durationMinutes, 0);
@@ -128,14 +131,16 @@ export default function DashboardPage() {
         <div>
           <h1 className="text-2xl font-semibold">Dashboard</h1>
           <p className="text-sm text-muted mt-1">
-            Track skills, log practice sessions, attach evidence, and view analytics.
+            Track skills, log practice sessions, attach evidence, and view
+            analytics.
           </p>
         </div>
 
         <div className="flex flex-wrap gap-2">
           <button
             type="button"
-            className="rounded-xl border border-border bg-card px-4 py-2 text-sm hover:bg-border/20 transition"
+            onClick={() => navigate("/app/skills/new")}
+            className="rounded-xl border border-border bg-card px-4 py-2 text-sm hover:bg-border/20 transition hover:cursor-pointer"
           >
             Add new skill
           </button>
@@ -261,7 +266,11 @@ function SkillCard({ skill }: { skill: Skill }) {
   );
 }
 
-function EvidenceCard({ item }: { item: { title: string; type: string; value: string; createdAt: string } }) {
+function EvidenceCard({
+  item,
+}: {
+  item: { title: string; type: string; value: string; createdAt: string };
+}) {
   return (
     <div className="rounded-2xl border border-border bg-card p-5 space-y-3">
       <div className="flex items-start justify-between gap-3">

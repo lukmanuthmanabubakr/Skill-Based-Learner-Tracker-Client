@@ -5,6 +5,7 @@ import LoginPage from "./pages/auth/LoginPage";
 import RegisterPage from "./pages/auth/RegisterPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardPage from "./pages/App/DashboardPage";
+import NewSkillPage from "./pages/App/NewSkillPage";
 
 export default function App() {
   return (
@@ -25,6 +26,8 @@ export default function App() {
         }
       >
         <Route index element={<DashboardPage />} />
+        <Route path="skills/new" element={<NewSkillPage />} />
+
       </Route>
 
       <Route path="*" element={<Navigate to="/auth/login" replace />} />
