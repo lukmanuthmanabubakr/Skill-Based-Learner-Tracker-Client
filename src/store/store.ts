@@ -1,9 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "../features/auth/authSlice";
+import skillsReducer from "../features/skills/skillsSlice";
+
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
+    skills: skillsReducer,
   },
 });
 
