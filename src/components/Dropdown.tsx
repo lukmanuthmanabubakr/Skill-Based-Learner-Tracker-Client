@@ -92,7 +92,7 @@ export default function Dropdown<T extends string>({
               >
                 <span>{opt.label}</span>
 
-                {/* checkmark for selected */}
+
                 <span
                   className={[
                     "text-xs text-muted transition-opacity",
