@@ -30,7 +30,7 @@ export default function AnalyticsBadge() {
         </svg>
       </div>
 
-      {/* Text */}
+
       <span className="text-sm font-medium text-text relative z-10">Analytics</span>
     </div>
   );
