@@ -6,7 +6,7 @@ export default function AuthLayout() {
     <div className="min-h-screen px-4">
       <PageTopBar />
 
-      {/* Add top padding so the fixed bar doesn't overlap */}
+      {/* Add top so the fixed bar doesn't overlap */}
       <div className="min-h-screen flex items-center justify-center pt-20">
         <div className="w-full max-w-md rounded-2xl border border-border bg-card p-6 shadow-sm">
           <Outlet />
