@@ -37,7 +37,6 @@ export default function DarkModeToggle() {
         }`}
       >
         {isDark ? (
-          /*   */
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-5 h-5"
