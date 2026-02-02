@@ -1,7 +1,6 @@
 export default function AnalyticsBadge() {
   return (
     <div className="relative flex items-center gap-2 overflow-hidden select-none rounded-full px-2 py-1">
-      {/* Shimmer */}
       <span
         className="
           absolute inset-0
