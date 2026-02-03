@@ -16,7 +16,7 @@ type PracticeLog = {
   skillName: string;
   durationMinutes: number;
   note: string;
-  date: string; // sim
+  date: string; //
 };
 
 type EvidenceItem = {
