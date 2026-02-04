@@ -94,8 +94,6 @@ const authSlice = createSlice({
                 state.isLoading = false;
                 state.error = action.payload || "Registration failed";
             })
-
-            // Login
             .addCase(loginUser.pending, (state) => {
                 state.isLoading = true;
                 state.error = null;
