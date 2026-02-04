@@ -80,7 +80,7 @@ const authSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            // Register
+            // Regis
             .addCase(registerUser.pending, (state) => {
                 state.isLoading = true;
                 state.error = null;
