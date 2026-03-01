@@ -17,7 +17,7 @@ export default function PageTopBar() {
           <div className="flex items-center gap-2">
             <DarkModeToggle />
 
-            {/* show logout only if logged in */}
+            {/* This will show logout only if logged in */}
             {token && (
               <button
                 onClick={() => dispatch(logout())}
